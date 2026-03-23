@@ -33,8 +33,8 @@ function getTemperature(diff) {
 // Configuración de pistas
 const HINTS_CONFIG = [
   { key: 'category', icon: '📂', label: 'Categoría' },
-  { key: 'century', icon: '📅', label: 'Siglo' },
   { key: 'continent', icon: '🌍', label: 'Continente' },
+  { key: 'century', icon: '📅', label: 'Siglo' },
   { key: 'person', icon: '👤', label: 'Personaje clave' },
   { key: 'description', icon: '📝', label: 'Descripción' },
   { key: 'decade', icon: '🔟', label: 'Década' }
