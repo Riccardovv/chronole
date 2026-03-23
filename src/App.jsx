@@ -220,14 +220,24 @@ function App() {
         )}
       </div>
 
-      {/* Evento a adivinar */}
+      {/* Evento misterioso (oculto hasta resolver) */}
       <div className="event-card">
-        <div className="event-icon">{secretEvent.category === 'Guerras' ? '⚔️' : 
-          secretEvent.category === 'Arte' ? '🎨' :
-          secretEvent.category === 'Ciencia' ? '🔬' :
-          secretEvent.category === 'Política' ? '👑' :
-          secretEvent.category === 'Deportes' ? '⚽' : '🚀'}</div>
-        <div className="event-text">{secretEvent.event}</div>
+        {gameStatus === 'playing' ? (
+          <>
+            <div className="event-icon">❓</div>
+            <div className="event-text">Evento Histórico Misterioso</div>
+            <div className="event-hint">Usa las pistas para descubrir de qué evento se trata...</div>
+          </>
+        ) : (
+          <>
+            <div className="event-icon">{secretEvent.category === 'Guerras' ? '⚔️' : 
+              secretEvent.category === 'Arte' ? '🎨' :
+              secretEvent.category === 'Ciencia' ? '🔬' :
+              secretEvent.category === 'Política' ? '👑' :
+              secretEvent.category === 'Deportes' ? '⚽' : '🚀'}</div>
+            <div className="event-text">{secretEvent.event}</div>
+          </>
+        )}
       </div>
 
       {/* Input de año */}
